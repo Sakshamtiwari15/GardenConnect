@@ -51,16 +51,16 @@ ON DUPLICATE KEY UPDATE `name` = VALUES(`name`);
 -- --------------------------------------------------------
 -- 4. Seed Users
 -- Passwords:
--- admin: Admin@123456 -> $2a$10$wE0vPshjL3gG9m7H6j5Uce58bF9wEwVlR9s1tUqHqR/zZkP9oX8r6
--- gardeners: Gardener@123 -> $2a$10$vN9r2u7zH4m6p3k9v2x1u.Vn/JkP6rQ7s8t9u0v1w2x3y4z5a6b7c
--- (BCrypt verified standard test hashes)
+-- admin: Admin@123456 -> $2a$12$Hfd3/rJUB4ypxxkjJ14dVu0kuvMTMnZc2Ud3ZuO4C1RLr/.wVqTQG
+-- gardeners: Gardener@123 -> $2a$12$XcMMMOR0.f/3e4uXdc2qROtCcJWrJLBrwq8qxfmqpK.EcSOhuHSMu
+-- (BCrypt verified standard test hashes, cost factor 12)
 -- --------------------------------------------------------
 INSERT INTO `users` (`id`, `username`, `email`, `password_hash`, `full_name`, `bio`, `location`, `gardening_interests`, `role`, `is_active`) VALUES
-(1, 'admin', 'admin@gardenconnect.com', '$2a$10$7vN3hA4gP5lD7rS8t9u0veX8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j', 'GardenConnect Administrator', 'Platform maintainer and chief horticulture coordinator.', 'Seattle, WA', 'System Administration, Permaculture', 'ADMIN', TRUE),
-(2, 'sarah_green', 'sarah.gardens@example.com', '$2a$10$7vN3hA4gP5lD7rS8t9u0veX8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j', 'Sarah Jenkins', 'Master Gardener with 12 years of experience in heirloom tomatoes and pollinator borders.', 'Portland, OR', 'Heirloom Tomatoes, Native Plants, Composting', 'GARDENER', TRUE),
-(3, 'marcus_urban', 'marcus.plants@example.com', '$2a$10$7vN3hA4gP5lD7rS8t9u0veX8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j', 'Marcus Chen', 'Balcony farmer experimenting with sub-irrigated planters and hydroponic leafy greens.', 'Chicago, IL', 'Container Gardening, Hydroponics, Herbs', 'GARDENER', TRUE),
-(4, 'elena_botanist', 'elena.bloom@example.com', '$2a$10$7vN3hA4gP5lD7rS8t9u0veX8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j', 'Dr. Elena Rostova', 'Botanist studying soil microbiology, mycorrhizal fungi, and organic pest mitigation.', 'Denver, CO', 'Soil Biome, Rare Tropicals, Organic Farming', 'GARDENER', TRUE),
-(5, 'david_veggies', 'david.organic@example.com', '$2a$10$7vN3hA4gP5lD7rS8t9u0veX8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j', 'David Miller', 'Homestead enthusiast growing 70% of family produce through succession planting.', 'Austin, TX', 'Succession Planting, Drip Irrigation, Root Crops', 'GARDENER', TRUE)
+(1, 'admin', 'admin@gardenconnect.com', '$2a$12$Hfd3/rJUB4ypxxkjJ14dVu0kuvMTMnZc2Ud3ZuO4C1RLr/.wVqTQG', 'GardenConnect Administrator', 'Platform maintainer and chief horticulture coordinator.', 'Seattle, WA', 'System Administration, Permaculture', 'ADMIN', TRUE),
+(2, 'sarah_green', 'sarah.gardens@example.com', '$2a$12$XcMMMOR0.f/3e4uXdc2qROtCcJWrJLBrwq8qxfmqpK.EcSOhuHSMu', 'Sarah Jenkins', 'Master Gardener with 12 years of experience in heirloom tomatoes and pollinator borders.', 'Portland, OR', 'Heirloom Tomatoes, Native Plants, Composting', 'GARDENER', TRUE),
+(3, 'marcus_urban', 'marcus.plants@example.com', '$2a$12$XcMMMOR0.f/3e4uXdc2qROtCcJWrJLBrwq8qxfmqpK.EcSOhuHSMu', 'Marcus Chen', 'Balcony farmer experimenting with sub-irrigated planters and hydroponic leafy greens.', 'Chicago, IL', 'Container Gardening, Hydroponics, Herbs', 'GARDENER', TRUE),
+(4, 'elena_botanist', 'elena.bloom@example.com', '$2a$12$XcMMMOR0.f/3e4uXdc2qROtCcJWrJLBrwq8qxfmqpK.EcSOhuHSMu', 'Dr. Elena Rostova', 'Botanist studying soil microbiology, mycorrhizal fungi, and organic pest mitigation.', 'Denver, CO', 'Soil Biome, Rare Tropicals, Organic Farming', 'GARDENER', TRUE),
+(5, 'david_veggies', 'david.organic@example.com', '$2a$12$XcMMMOR0.f/3e4uXdc2qROtCcJWrJLBrwq8qxfmqpK.EcSOhuHSMu', 'David Miller', 'Homestead enthusiast growing 70% of family produce through succession planting.', 'Austin, TX', 'Succession Planting, Drip Irrigation, Root Crops', 'GARDENER', TRUE)
 ON DUPLICATE KEY UPDATE `full_name` = VALUES(`full_name`);
 
 -- --------------------------------------------------------
