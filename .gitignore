@@ -1,0 +1,46 @@
+# Compiled class files
+target/
+*.class
+
+# Log files
+*.log
+logs/
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual Machine Crash Logs
+hs_err_pid*
+replay_pid*
+
+# IDE Specific Files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+
+# OS Specific Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and Secret Configurations
+.env
+db.properties
+application-local.properties
+
+# Uploaded User Content (Local Directory)
+uploads/
+temp/
+scratch/

@@ -1,0 +1,17 @@
+# ========================================================
+# GardenConnect - Database Configuration Properties
+# Copy this file to 'db.properties' in this directory
+# or provide these keys via System Environment Variables.
+# ========================================================
+
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/gardenconnect?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+db.username=root
+db.password=your_secure_mysql_password
+
+# Connection Pool Settings (HikariCP)
+db.pool.maximumPoolSize=10
+db.pool.minimumIdle=3
+db.pool.connectionTimeoutMs=30000
+db.pool.idleTimeoutMs=600000
+db.pool.maxLifetimeMs=1800000
